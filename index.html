@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Manoj!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Pixel Font -->
+</head>
+<body>
+    <div id="game-container">
+        <!-- Intro Screen -->
+        <section id="intro-screen" class="screen active">
+            <h1>FRIDAYS EVERYONE!</h1>
+            <p>...almost! But today is even MORE special, Manoj!</p>
+            <p>Your team has cooked up a quick Birthday Quest to celebrate YOU!</p>
+            <button id="start-quest-btn">Begin Your Birthday Quest!</button>
+            <p style="font-size: 0.7em; margin-top:30px;">
+    (P.S. Resisting an AC this year? <span id="ac-easter-egg" style="cursor:pointer; text-decoration:underline; color:#00ff99;">Click here</span> for moral support!)
+</p>
+        </section>
+
+        <!-- Literary Corner -->
+        <section id="literary-screen" class="screen">
+            <h2>Manoj's Literary Corner</h2>
+            <p>We know your taste in books is top-notch! Can you spot a recent impactful read?</p>
+            <div class="choices">
+                <button class="choice" data-correct="true">"We Do Not Part" (Han Kang)</button>,
+                <button class="choice">"War and Peace"</button>
+                <button class="choice">"Generic Business Title"</button>
+            </div>
+            <p class="feedback"></p>
+            <button class="next-stage-btn" style="display:none;">Next Chapter!</button>
+        </section>
+
+        <!-- Haiku Haven (Simplified: Pick a final line) -->
+        <section id="haiku-screen" class="screen">
+            <h2>The Haiku Haven</h2>
+            <p>Inspired by your poetic side, we started a birthday haiku. Pick the best final line!</p>
+            <div class="haiku-lines">
+                <p>Fridays bring your mail,</p>
+                <p>Wisdom, wit, and leadership,</p>
+                <div class="choices">
+                    <button class="choice" data-correct="true">What a happy day!</button>
+                    <button class="choice">Cats are pretty cool.</button>
+                    <button class="choice">Need more coffee now.</button>
+                </div>
+            </div>
+            <p class="feedback"></p>
+            <button class="next-stage-btn" style="display:none;">Onwards!</button>
+        </section>
+
+        <!-- Travel & Food (Simplified: One question) -->
+        <section id="travel-screen" class="screen">
+            <h2>Manoj's Map of Memories</h2>
+            <p>You've shared some amazing travel and food gems! Where did you tell us the Pineapple Lychee Cherry cake was "absolute wow"?</p>
+            <div class="choices">
+                <button class="choice">A roadside stall</button>
+                <button class="choice" data-correct="true">Amintiri (next to Muro)</button>
+                <button class="choice">The office canteen</button>
+            </div>
+            <p class="feedback"></p>
+            <button class="next-stage-btn" style="display:none;">Keep Exploring!</button>
+        </section>
+
+        <!-- Marketing HQ (Simplified: One question) -->
+        <section id="marketing-screen" class="screen">
+            <h2>The Marketing & Strategy HQ</h2>
+            <p>Your strategic insights are always on point! What exciting tech did you mention Infosys BPM is doing real work on?</p>
+            <div class="choices">
+                <button class="choice">Holographic Meetings</button>
+                <button class="choice" data-correct="true">Agentic AI</button>
+                <button class="choice">Singing Robots</button>
+            </div>
+            <p class="feedback"></p>
+            <button class="next-stage-btn" style="display:none;">To the Finale!</button>
+        </section>
+
+        <!-- Finale Screen -->
+        <section id="finale-screen" class="screen">
+            <h2>HAPPY BIRTHDAY, MANOJ!</h2>
+            <p>You've completed your Birthday Quest!</p>
+            <p>We hope this brought a smile to your face. We appreciate your leadership, your insights, your humor, and everything you do for the team.</p>
+            <p>Here’s to a year filled with new stories, deeper insights, and joyful moments. May your journey ahead be as inspiring and extraordinary as the one you’ve already walked.</p>
+            <p>Wishing you a birthday as brilliant, thoughtful, and multifaceted as you are.</p>
+            <p>Warmly,</p>
+            <p>Corporate Strategy Team</p>
+            <img id="cake-img" src="img/pixel_cake.png" alt="Pixel Birthday Cake" style="display:none;">
+            <!-- We'll try to find a simple pixel cake image -->
+             <p class="ps-text" style="margin-top: 30px;">
+                    P.S. No Pressure Manoj, you don't have to click this
+                    <a href="https://www.storiesbysoumya.com/turkish-souvenirs-turkey-best-gifts/" target="_blank" rel="noopener noreferrer" class="external-link">link</a>
+                    (we are not expecting all of this when you're back 😉).
+                </p>
+        </section>
+        <div id="rewards-bar" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #555;">
+    <span class="reward-badge" id="badge-book" style="display:none;">📖</span>
+    <span class="reward-badge" id="badge-haiku" style="display:none;">📜</span>
+    <span class="reward-badge" id="badge-travel" style="display:none;">✈️</span>
+    <span class="reward-badge" id="badge-marketing" style="display:none;">💡</span>
+</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
